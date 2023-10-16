@@ -3,10 +3,25 @@ unit Unit1;
 interface
 
 uses
-  System.SysUtils, System.Classes, JS, Web, WEBLib.Graphics, WEBLib.Controls,
-  WebLib.WebTools, jsdelphisystem, System.DateUtils, WeBLib.JSON,
-  WEBLib.Forms, WEBLib.Dialogs, Vcl.Controls, WEBLib.ExtCtrls,
-  WEBLib.WebCtrls,WEBLib.REST;
+  System.SysUtils,
+  System.Classes,
+  System.DateUtils,
+
+  JS,
+  Web,
+  jsdelphisystem,
+
+  WEBLib.REST,
+  WeBLib.JSON,
+
+  WEBLib.Graphics,
+  WEBLib.Controls,
+  WebLib.WebTools,
+  WEBLib.Forms,
+  WEBLib.Dialogs,
+  Vcl.Controls,
+  WEBLib.ExtCtrls,
+  WEBLib.WebCtrls;
 
 type
   TForm1 = class(TWebForm)
@@ -18,6 +33,9 @@ type
     { Private declarations }
   public
     { Public declarations }
+    procedure PreventCompilerHint(I: integer); overload;
+    procedure PreventCompilerHint(S: string); overload;
+    procedure PreventCompilerHint(J: TJSONArray); overload;
   end;
 
 var
@@ -34,8 +52,6 @@ end;
 
 procedure TForm1.tmrStartTimer(Sender: TObject);
 var
-  i: Integer;
-
   Background: String;
   PhotoCount: Integer;
   FirstPerson: Integer;
@@ -201,6 +217,17 @@ begin
       console.log('[ '+E.ClassName+' ] '+E.Message);
     end
   end;
+
+  // This is just to supress the "local variable is assigned but never used" messages
+  PreventCompilerHint(Background);
+  PreventCompilerHint(PhotoCount);
+  PreventCompilerHint(FirstPerson);
+  PreventCompilerHint(BorderRadius);
+  PreventCompilerHint(JSONData);
 end;
+
+procedure TForm1.PreventCompilerHint(S: string);               overload; begin end;
+procedure TForm1.PreventCompilerHint(I: integer);              overload; begin end;
+procedure TForm1.PreventCompilerHint(J: TJSONArray);           overload; begin end;
 
 end.
