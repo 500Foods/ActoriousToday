@@ -1,0 +1,13 @@
+body {
+  overflow: hidden;
+}
+
+#divPhotos {
+  transform-origin: top left;
+}
+
+.Photo {
+  border-radius: 6px;
+}
+
+
