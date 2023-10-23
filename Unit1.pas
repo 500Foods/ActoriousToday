@@ -132,7 +132,7 @@ begin
 
   // Setup for Query
   URL := 'https://carnival.500foods.com:10999';
-  Endpoint := '/tms/xdata/ActorInfoService/TopToday';
+  Endpoint := '/actorious/ActorInfoService/TopToday';
   Secret := 'LeelooDallasMultiPass';
 
 
