@@ -27,12 +27,16 @@ type
   TForm1 = class(TWebForm)
     divPhotos: TWebHTMLDiv;
     tmrStart: TWebTimer;
+    tmrRefresh: TWebTimer;
     procedure WebFormCreate(Sender: TObject);
     [async] procedure tmrStartTimer(Sender: TObject);
+    procedure tmrRefreshTimer(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+
+    ActoriousDate: TDateTime;
     procedure PreventCompilerHint(I: integer); overload;
     procedure PreventCompilerHint(S: string); overload;
     procedure PreventCompilerHint(J: TJSONArray); overload;
@@ -47,7 +51,18 @@ implementation
 
 procedure TForm1.WebFormCreate(Sender: TObject);
 begin
+  ActoriousDate := Now;
   tmrStart.Enabled := True;
+  tmrRefresh.Enabled := True;
+end;
+
+procedure TForm1.tmrRefreshTimer(Sender: TObject);
+begin
+  if Dateof(ActoriousDate) <> DateOf(Now) then
+  begin
+    ActoriousDate := Now;
+    tmrStart.Enabled := True;
+  end;
 end;
 
 procedure TForm1.tmrStartTimer(Sender: TObject);
@@ -136,6 +151,10 @@ begin
   Secret := 'LeelooDallasMultiPass';
 
 
+  // Bit of Prep work
+  Form1.Caption := 'Actorious Today for '+FormatDateTime('mmm dd',EncodeDate(2020,aMonth,aDay));
+  console.log('Requesting Data from Actorious for '+FormatDateTime('mmm dd',EncodeDate(2020,aMonth,aDay)));
+
   // Make the request
   WebRequest := TWebHTTPRequest.Create(Self);
   WebRequest.URL := URL+Endpoint+'?Secret='+Secret+'&aMonth='+IntToStr(aMonth)+'&aDay='+IntToStr(aDay);
@@ -177,6 +196,9 @@ begin
       divPhotos.style.setProperty("align-content","flex-start");
       divPhotos.style.setProperty("overflow","hidden");
       divPhotos.style.setProperty("flex-wrap","wrap");
+
+      // Empty out any existing content
+      divPhotos.replaceChildren();
 
       // Do this for as many photos as we'd like to see
       for (var i = FirstPerson; i < (FirstPerson + PhotoCount); i++) {

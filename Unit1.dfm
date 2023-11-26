@@ -29,4 +29,11 @@ object Form1: TForm1
     Left = 296
     Top = 248
   end
+  object tmrRefresh: TWebTimer
+    Enabled = False
+    Interval = 10000
+    OnTimer = tmrRefreshTimer
+    Left = 304
+    Top = 336
+  end
 end
