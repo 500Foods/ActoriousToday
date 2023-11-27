@@ -46,7 +46,6 @@ jobs:
     # Save the output back to the repository
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-#        ref: ${{ github.head_ref }}
         skip_dirty_check: true            
         branch: main
         file_pattern: 'README.md'
