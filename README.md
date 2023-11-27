@@ -26,7 +26,6 @@ This is where the need for the F parameter comes from - to skip over the first f
 For more information about using <iframe> elements with TMS WEB Core web applications, check out [this post](https://www.tmssoftware.com/site/blog.asp?post=1090).
 
 ## Repository Information
-
 [![Count Lines of Code](https://github.com/500Foods/ActoriousToday/actions/workflows/main.yml/badge.svg)](https://github.com/500Foods/ActoriousToday/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
