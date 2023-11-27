@@ -29,8 +29,8 @@ jobs:
     # Save the output back to the repository
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-          branch: main
-          file_pattern: 'cloc.md'
+        branch: main
+        file_pattern: 'cloc.md'
 
 
 
