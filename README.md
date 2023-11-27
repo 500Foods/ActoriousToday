@@ -28,19 +28,19 @@ For more information about using <iframe> elements with TMS WEB Core web applica
 ## Repository Information
 
 [![Count Lines of Code](https://github.com/500Foods/ActoriousToday/actions/workflows/main.yml/badge.svg)](https://github.com/500Foods/ActoriousToday/actions/workflows/main.yml)
-<!--CLOC-START-->
+<!--CLOC-START -->
 ```
-Last Updated at 2023-11-27 01:48:58 UTC
+Last Updated at 2023-11-27 01:52:22 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 Pascal                           2             48             62            160
-Markdown                         1              8              2             40
 Delphi Form                      1              0              0             39
-YAML                             2             10             13             33
+Markdown                         1              8              2             39
+YAML                             2             11             13             33
 HTML                             2              7              0             23
 -------------------------------------------------------------------------------
-SUM:                             8             73             77            295
+SUM:                             8             74             77            294
 -------------------------------------------------------------------------------
 ```
 <!--CLOC-END-->
