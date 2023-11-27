@@ -37,7 +37,7 @@ jobs:
     - run: echo "<!-- CLOC-START -->" >> README.md
     - run: echo "\`\`\`" >> README.md
     - run: echo "NOW=$(date)" >> $GITHUB_ENV
-    - run: echo ${{ env.NOW }} >> README.md
+    - run: echo "Last Updated: ${{ env.NOW }}" >> README.md
     - run: tail -n +2 cloc.txt >> README.md
     - run: echo "\`\`\`" >> README.md
     - run: cat xx02 >> README.md
@@ -45,7 +45,7 @@ jobs:
     # Save the output back to the repository
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        ref: ${{ github.head_ref }}
+#        ref: ${{ github.head_ref }}
         skip_dirty_check: true            
         branch: main
         file_pattern: 'README.md'
