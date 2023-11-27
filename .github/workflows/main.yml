@@ -33,12 +33,12 @@ jobs:
 
     # Copy the new cloc.txt into the README.md file at the appropriate spot
     - run: csplit README.md /\<\!--/ {1}
-    - run: echo "<!-- CLOC-START -->" >> xx00
-    - run: echo "\`\`\`" >> xx00
     - run: cp xx00 README.md
+    - run: echo "<!-- CLOC-START -->" >> README.md
+    - run: echo "\`\`\`" >> README.md
+    - run: echo "Updated: " ${{ github.event.repository.updated_at}} >> README.md
     - run: tail -n +2 cloc.txt >> README.md
     - run: echo "\`\`\`" >> README.md
-    - run: echo "Updated " >> README.md
     - run: cat xx02 >> README.md
 
     # Save the output back to the repository
