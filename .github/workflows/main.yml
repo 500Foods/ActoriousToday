@@ -26,11 +26,4 @@ jobs:
       with:
         options: --md --report-file=cloc.md
 
-    - name: push
-      uses: actions-x/commit@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-      with:
-        name: CLOC Update
-        files: ./cloc.md
-        message: '[CLOC] updated cloc.md with latest information'        
+
