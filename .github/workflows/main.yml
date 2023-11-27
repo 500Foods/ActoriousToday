@@ -32,7 +32,7 @@ jobs:
         options: --report-file=cloc.txt
 
     # Copy the new cloc.txt into the README.md file at the appropriate spot
-    - run: csplit README.md /\<\!-- CLOC-/ {1}
+    - run: csplit README.md /\<\!--/ {1}
     - run: echo "<!-- CLOC-START -->" >> xx00
     - run: echo "\`\`\`" >> xx00
     - run: cp xx00 README.md
