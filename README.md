@@ -30,20 +30,20 @@ For more information about using <iframe> elements with TMS WEB Core web applica
 [![Count Lines of Code](https://github.com/500Foods/ActoriousToday/actions/workflows/main.yml/badge.svg)](https://github.com/500Foods/ActoriousToday/actions/workflows/main.yml)
 <!-- CLOC-START -->
 ```
-github.com/AlDanial/cloc v 1.96  T=0.03 s (267.0 files/s, 12994.7 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 Pascal                           2             48             62            160
+Markdown                         1              8              2             40
 Delphi Form                      1              0              0             39
-YAML                             2             10             12             29
-Markdown                         1              8              2             25
+YAML                             2             10             12             33
 HTML                             2              7              0             23
 Text                             1              0              0             13
 -------------------------------------------------------------------------------
-SUM:                             9             73             76            289
+SUM:                             9             73             76            308
 -------------------------------------------------------------------------------
 ```
+Updated 
 <!-- CLOC-END -->
 
 ## Sponsor / Donate / Support
