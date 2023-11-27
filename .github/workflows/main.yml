@@ -31,13 +31,19 @@ jobs:
       with:
         options: --report-file=cloc.txt
 
+    # Copy the new cloc.txt into the README.md file at the appropriate spot
+    - run: csplit README.md /\<\!--/ {1}
+    - run: echo "<!-- CLOC-START -->" >> xx00
+    - run: cat xx00 cloc.txt > README.md
+    - run: cat xx02 >> README.md
+
     # Save the output back to the repository
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         ref: ${{ github.head_ref }}
         skip_dirty_check: true            
         branch: main
-        file_pattern: 'cloc.txt'
+        file_pattern: 'README.md'
 
 
 
