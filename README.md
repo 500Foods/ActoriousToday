@@ -28,10 +28,8 @@ For more information about using <iframe> elements with TMS WEB Core web applica
 ## Repository Information
 
 [![Count Lines of Code](https://github.com/500Foods/ActoriousToday/actions/workflows/main.yml/badge.svg)](https://github.com/500Foods/ActoriousToday/actions/workflows/main.yml)
-```
 <!--CLOC-START -->
 <!-- CLOC-END -->
-```
 
 ## Sponsor / Donate / Support
 If you find this work interesting, helpful, or valuable, or that it has saved you time, money, or both, please consider directly supporting these efforts financially via [GitHub Sponsors](https://github.com/sponsors/500Foods) or donating via [Buy Me a Pizza](https://www.buymeacoffee.com/andrewsimard500). Also, check out these other [GitHub Repositories](https://github.com/500Foods?tab=repositories&q=&sort=stargazers) that may interest you.
