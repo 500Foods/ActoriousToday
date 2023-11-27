@@ -37,7 +37,7 @@ jobs:
     - run: echo "<!-- CLOC-START -->" >> README.md
     - run: echo "\`\`\`" >> README.md
     - run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S%z')" >> $GITHUB_ENV
-    - run: echo "Last Updated\: ${{ env.NOW }}" >> README.md
+    - run: echo "Last Updated':' ${{ env.NOW }}" >> README.md
     - run: tail -n +2 cloc.txt >> README.md
     - run: echo "\`\`\`" >> README.md
     - run: cat xx02 >> README.md
