@@ -22,6 +22,6 @@ jobs:
 
     # Runs djdefi/cloc-action
     - name: Count Lines of Code (cloc)
-      uses: djdefi/cloc-action@5
+      uses: djdefi/cloc-action@main
       with:
-        args: --md --report-file=cloc.md
+        options: --md --report-file=cloc.md
