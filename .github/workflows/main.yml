@@ -34,7 +34,11 @@ jobs:
     # Copy the new cloc.txt into the README.md file at the appropriate spot
     - run: csplit README.md /\<\!--/ {1}
     - run: echo "<!-- CLOC-START -->" >> xx00
-    - run: cat xx00 cloc.txt > README.md
+    - run: echo "```" >> xx00
+    - run: cp xx00 README.md
+    - run: tail -n +2 cloc.txt >> README.md
+    - run echo "```" >> README.md
+    - run: echo "Updated: " `date` >> xx00
     - run: cat xx02 >> README.md
 
     # Save the output back to the repository
