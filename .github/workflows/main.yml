@@ -38,7 +38,7 @@ jobs:
     - run: cp xx00 README.md
     - run: tail -n +2 cloc.txt >> README.md
     - run: echo "```" >> README.md
-    - run: echo "Updated: $(date +'%Y-%m-%d %H:%M:%S')" >> README.md
+    - run: echo "Updated: " $(date +'%Y-%m-%d %H:%M:%S') >> README.md
     - run: cat xx02 >> README.md
 
     # Save the output back to the repository
