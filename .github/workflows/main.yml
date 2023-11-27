@@ -26,4 +26,11 @@ jobs:
       with:
         options: --md --report-file=cloc.md
 
+    # Save the output back to the repository
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+          branch: main
+          file_pattern: 'cloc.md'
+
+
 
