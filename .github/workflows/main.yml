@@ -29,7 +29,7 @@ jobs:
     - name: Count Lines of Code (cloc)
       uses: djdefi/cloc-action@main
       with:
-        options: --md --report-file=cloc.md
+        options: --report-file=cloc.txt
 
     # Save the output back to the repository
     - uses: stefanzweifel/git-auto-commit-action@v4
@@ -37,7 +37,7 @@ jobs:
         ref: ${{ github.head_ref }}
         skip_dirty_check: true            
         branch: main
-        file_pattern: 'cloc.md'
+        file_pattern: 'cloc.txt'
 
 
 
